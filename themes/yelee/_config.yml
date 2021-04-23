@@ -9,15 +9,15 @@ Yelee: "3.5"
 menu:
   主页: /
   所有文章: /archives/
-  #随笔: /tags/随笔
-  标签云: /tags/
-  关于我: /about/
+  # 随笔: /tags/随笔
+  # 标签云: /tags/
+  # 关于我: /about/
 
 # Link to your avatar | 填写头像地址
-avatar: /img/2.jpg
+avatar: /blogResource/img/2.jpg
 
 # Small icon of Your site | 站点小图标地址
-favicon: /favicon.png
+favicon: /blogResource/favicon.png
 
 # Internationalization | 主题语言
 ## Change Language in SITE's _config.yml | 在站点配置中切换语言
@@ -166,7 +166,7 @@ animate: true
 
 # Load jQuery UI to style tooltips
 # 工具提示框样式美化
-jquery_ui: false
+jquery_ui: true
 
 # Max width of right cloumn | 限制右侧内容的宽带 
 limit_article_width: 
@@ -188,7 +188,7 @@ friends:
 
 #是否开启“关于我”。
 aboutme: 躺平
-#aboutme: false
+# aboutme: false
 
 # Open link in a new tab | 是否在新窗口打开链接
 ## `global` 0: Set separately, 1: Open all in new 2: Open all in current
