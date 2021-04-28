@@ -25,6 +25,9 @@ html(lang=config.language)
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     title= pageTitle
     script(src='https://cdn.bootcss.com/valine/1.4.4/Valine.min.js')
+    script(src='https://cdn.bootcdn.net/ajax/libs/highlight.js/10.1.2/highlight.min.js')
+    script(src='https://cdn.bootcdn.net/ajax/libs/aplayer/1.9.1/APlayer.min.js')  
+    script(src='https://unpkg.com/meting@1.2/dist/Meting.min.js')
     if theme.mermaid === true
       script(src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.8.2/mermaid.min.js")
       script
@@ -73,6 +76,9 @@ html(lang=config.language)
             #total-categories
               span.total-title Categories:
               span.total-number= site.categories.length
+            
+          | <iframe frameborder="yes"  marginheight="20" width=300 height=100 src="//music.163.com/outchain/player?type=0&id=6731415869&auto=1&height=90"></iframe>
+
         #aside-block(style= asideBlock)
           block aside-block
         footer(style=footerStyle)
