@@ -56,7 +56,9 @@ code, pre {
 
 code {
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 0 3px; }
+  padding: 0 3px; 
+  
+}
 
 pre {
   background-color: transparent; }
