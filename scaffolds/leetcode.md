@@ -1,6 +1,6 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
-category:
+tags: Java
+category: LeetCode每日一题
 ---
