@@ -10,6 +10,7 @@
 
   const asideLogo = theme.aside.logo
   const asideBlock = theme.aside.block_in_top ? 'order: -1' : ''
+  
 
   var mainStyle = ""
   var footerStyles = ""
@@ -76,10 +77,13 @@ html(lang=config.language)
             #total-categories
               span.total-title Categories:
               span.total-number= site.categories.length
-            
-          | <iframe frameborder="yes" autoplay="false" marginheight="20" width=300 height=100 src="//music.163.com/outchain/player?type=0&id=6731415869&auto=1&height=90"></iframe>
+              
           | <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-          | <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+          | <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+          | <script src="https://blog-static.cnblogs.com/files/yjlaugus/APlayer.min.js"></script>
+          | <div id="aplayer" class="aplayer"  data-id="6731415869" data-server="netease" data-type="playlist" data-fixed="true" data-listfolded="true" data-order="random" data-theme="#F58EA8"></div>
+          | <script src="https://unpkg.com/meting@1.2/dist/Meting.min.js"></script>
+          | <span id="busuanzi_container_site_pv">本站总访问<span id="busuanzi_value_site_pv"></span>次</span>
         #aside-block(style= asideBlock)
           block aside-block
         footer(style=footerStyle)

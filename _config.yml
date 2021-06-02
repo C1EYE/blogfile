@@ -108,3 +108,12 @@ deploy:
   repo: 
     github: https://github.com/C1EYE/blogResource.git
 
+encrypt: # hexo-blog-encrypt
+  abstract: 与 Rhodes Island™ 取得弱神经连接时需要口令
+  message: 请输入与 Rhodes Island™ 取得弱神经连接时的口令：
+  tags:
+  - {name: A, password: 665521}
+  - {name: S, password: 010902}
+  theme: xray
+  wrong_pass_message: 与 Rhodes Island™ 效验口令失败，请重试。
+  wrong_hash_message: 与 Rhodes Island™ 效验口令失败，当前使用临时权限查看。

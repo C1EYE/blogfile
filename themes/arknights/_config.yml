@@ -3,7 +3,6 @@ language: zh
 
 # canvas 动态背景
 canvas_dust: true
-
 # 侧边栏
 aside:
   in_left: false # 侧边栏在左 true / false
@@ -21,10 +20,9 @@ post:
   source: false # 是否显示源文件路径
   excerpt: false # 是否在文章中显示摘要内容（<!-- more--> 以上的内容）
   reward: true # 文章末显示打赏二维码
-# 文章内目录
 toc:
-  list_number: true # true / false ；是否显示编号
-  max_depth: 6 # 最大目录深度
+  list_number: false # true / false ；是否显示编号
+  max_depth: 4 # 最大目录深度
   min_depth: 1 # 最小目录深度
 # 归档页；true / false
 archives:
@@ -33,11 +31,11 @@ archives:
 
 # Valine 无后端评论系统
 valine:
-  app_id: # <APP ID>
-  app_key: # <APP KEY>
+  app_id: CFK5c68KCzaUK5MxVVKuuOjN-gzGzoHsz
+  app_key: L4ywj7c9vQ7c73moKeMNsKLF
 
 # 图表支持
-mermaid: false
+mermaid: true
 
 # main menu navigation
 menu:
@@ -53,3 +51,15 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - https://cdn.bootcdn.net/ajax/libs/highlight.js/10.1.2/highlight.min.js
+
+# # Security
+# encrypt: # hexo-blog-encrypt
+#   abstract: 与 Rhodes Island™ 建立神经连接时需要口令
+#   message: 请输入与 Rhodes Island™ 建立神经连接时的口令：
+#   tags:
+#   - {name: 权限A, password: 665521}
+#   - {name: 权限S, password: 31415926535897932384626}
+#   template: <div id="hexo-blog-encrypt" data-wpm="{{hbeWrongPassMessage}}" data-whm="{{hbeWrongHashMessage}}"><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="{{hbeMessage}}" /><label>{{hbeMessage}}</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="{{hbeHmacDigest}}">{{hbeEncryptedData}}</script></div>
+#   wrong_pass_message: 与 Rhodes Island™ 效验口令失败，请重试。
+#   wrong_hash_message: 与 Rhodes Island™ 效验口令失败，当前使用临时权限查看。
+
