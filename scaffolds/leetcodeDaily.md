@@ -1,9 +1,8 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags: 
-- 刷题
-category: LeetCode
+tags: Java
+category: LeetCode每日一题
 ---
 
 <!-- more -->
