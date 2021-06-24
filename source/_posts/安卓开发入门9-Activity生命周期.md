@@ -33,3 +33,52 @@ public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBu
     super.onSaveInstanceState(outState, outPersistentState);
 }
 ```
+
+## Activity之间的数据传递
+
+- 使用putExtra方法就好了
+
+```java
+Intent intent = new Intent(this, MyDialog.class);
+intent.putExtra("ALG", 666);
+```
+
+- 接收方根据key来接受
+
+```java
+Intent intent = getIntent();
+ if(intent!=null){
+     intent.getStringExtra("ALG");
+}
+```
+
+- 可以使用Bundle来存放不同类型的值
+
+```java
+Bundle bundle = new Bundle();
+bundle.putString("ALG","ALG");
+bundle.putInt("ALG",2);
+```
+
+- 想要在返回时传值
+- 首先要在启动时使用
+
+```java
+startActivityForResult(intent,666,bundle);
+```
+
+- 返回时
+
+```java
+setResult(RESULT_OK，intent);
+finish();
+```
+
+- 在这里处理，根据请求和返回值来判断是哪个Activity
+
+```java
+@Override
+protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+}
+```
