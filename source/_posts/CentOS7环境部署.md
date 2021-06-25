@@ -6,6 +6,7 @@ tags:
 - 服务器
 category:
 - 服务器
+reward: true
 ---
 
 <!-- more -->
