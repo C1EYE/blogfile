@@ -33,6 +33,7 @@
     "hexo-theme-nexmoe": "^2.7.12",
     "hexo-toc": "^1.1.0",
     "hexo-wordcount": "^6.0.1",
-    "tinymce": "^5.8.0"
+    "tinymce": "^5.8.0",
+    "toc": "^0.4.0"
   }
 }

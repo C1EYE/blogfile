@@ -1,8 +1,10 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags: Java
+tags: 
+- Java
 category: LeetCode每日一题
+index: true
 ---
 
 <!-- more -->

@@ -5,6 +5,7 @@ tags:
 - Android
 category:
 - Android
+index: true
 ---
 
 <!-- more -->

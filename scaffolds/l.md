@@ -4,6 +4,7 @@ date: {{ date }}
 tags: 
 - 刷题
 category: Leetcode
+index: true
 ---
 
 <!-- more -->

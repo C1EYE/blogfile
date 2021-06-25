@@ -1,7 +1,6 @@
 ---
 title: {{ title }}
 tags: 
-- A
 category: 
 date: {{ date }}
 password: 665521
