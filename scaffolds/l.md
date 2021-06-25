@@ -3,7 +3,7 @@ title: {{ title }}
 date: {{ date }}
 tags: 
 - 刷题
-category: LeetCode
+category: Leetcode
 ---
 
 <!-- more -->

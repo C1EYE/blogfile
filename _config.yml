@@ -13,7 +13,8 @@ timezone: 'UTC'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://c1eye.github.io/blogResource/
+# url: https://c1eye.github.io/blogResource/
+url: http://8.136.232.203/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -106,7 +107,9 @@ theme: arknights
 deploy:
   type: git
   repo: 
-    github: https://github.com/C1EYE/blogResource.git
+    # github: https://github.com/C1EYE/blogResource.git
+    root@8.136.232.203:/var/repo/c1eye.git
+
 
 encrypt: # hexo-blog-encrypt
   abstract: 与 Rhodes Island™ 取得弱神经连接时需要口令
