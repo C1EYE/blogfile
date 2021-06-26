@@ -21,8 +21,8 @@ post:
   excerpt: false # 是否在文章中显示摘要内容（<!-- more--> 以上的内容）
   reward: true # 文章末显示打赏二维码
 toc:
-  list_number: true # true / false ；是否显示编号
-  max_depth: 4 # 最大目录深度
+  list_number: false # true / false ；是否显示编号
+  max_depth: 6 # 最大目录深度
   min_depth: 1 # 最小目录深度
   slugify: false
 # 归档页；true / false

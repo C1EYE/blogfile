@@ -216,10 +216,10 @@ wrong_hash_message: 与 Rhodes Island™ 效验口令失败，当前使用临时
 
 ```yaml
 # 文章页右上角发布/更新日期
-post-info: true/false
+info: true/false
 
 # 侧边栏的目录
-post-index: true/false
+index: true/false
 
 # 打赏框
 reward: true/false

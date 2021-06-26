@@ -2,11 +2,8 @@
 title: {{ title }}
 date: {{ date }}
 tags: 
-- Android
-category:
-- Android
+category: 
 index: true
-info: true
 ---
-
 <!-- more -->
+<!-- toc -->

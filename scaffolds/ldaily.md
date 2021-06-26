@@ -5,6 +5,7 @@ tags:
 - Java
 category: LeetCode每日一题
 index: true
+info: true
 ---
 
 <!-- more -->
