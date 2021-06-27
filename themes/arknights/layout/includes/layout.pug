@@ -29,6 +29,8 @@ html(lang=config.language)
     script(src='https://cdn.bootcdn.net/ajax/libs/highlight.js/10.1.2/highlight.min.js')
     script(src='https://cdn.bootcdn.net/ajax/libs/aplayer/1.9.1/APlayer.min.js')  
     script(src='https://unpkg.com/meting@1.2/dist/Meting.min.js')
+    script(src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js")
+    script(src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js")
     if theme.mermaid === true
       script(src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.8.2/mermaid.min.js")
       script
@@ -37,6 +39,7 @@ html(lang=config.language)
         |   , theme: 'dark'
         | });
     link(rel="stylesheet", href=config.root + "css/arknights.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css")
     if theme.stylesheets !== undefined && theme.stylesheets.length > 0
       //- stylesheets list from _config.yml
       each url in theme.stylesheets
