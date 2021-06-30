@@ -64,3 +64,6 @@ scripts:
 #   wrong_pass_message: 与 Rhodes Island™ 效验口令失败，请重试。
 #   wrong_hash_message: 与 Rhodes Island™ 效验口令失败，当前使用临时权限查看。
 
+# Local search
+local_search:
+  enable: true
