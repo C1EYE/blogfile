@@ -27,7 +27,7 @@ date: 2021-06-19 15:37:05
 
 - 销毁之前
 
-```
+```java
 @Override
 public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
     super.onSaveInstanceState(outState, outPersistentState);
