@@ -11,7 +11,7 @@ aside:
   block_in_top: true # 目前为侧边栏文章目录置顶
   copyright: # 版权声明、备案号等
     ©: 2019 to 2021
-    ICP: 吉ICP备2021005147
+    ICP: 吉ICP备2021005147号
 
 # post 文章页面配置；true / false
 post:
