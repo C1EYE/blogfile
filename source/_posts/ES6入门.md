@@ -1007,7 +1007,7 @@ Promise.resolve(a).then(data =>{
 })
 ```
 
-### Promise.resolve()
+### Promise.reject()
 
 失败状态的简写
 
@@ -1089,5 +1089,216 @@ const loadImgAsync = url=>{
         img.src = url;
     })
 }
+```
+
+# Class类
+
+> 和其他静态类型的语言很像是不是
+
+```js
+class Person{
+    //构造方法，不显式声明会有默认实现
+    constructor(name,age) {
+        this.name = name;
+        this.age = age;
+    }
+    speak(){
+        console.log(this.name,this.age);
+    }
+}
+
+let person = new Person('ALG',8);
+person.speak();
+//和构造方法比较
+function Person(name,age){
+    this.name = name;
+    this.age = age;
+}
+
+Person.prototype.speak = function () {
+    console.log(this.name, this.age);
+};
+```
+
+实际上Class的写法本质上就是构造方法，只是语法糖而已
+
+```js
+console.log(typeof Person)
+```
+
+![image-20210719151625677](https://raw.githubusercontent.com/C1EYE/figureBed/main/img/20210719151625.png)
+
+## 两种定义形式
+
+1. 声明形式
+
+```js
+class Person{
+    //构造方法，不显式声明会有默认实现
+    constructor(name,age) {
+        this.name = name;
+        this.age = age;
+    }
+    speak(){
+        console.log(this.name,this.age);
+    }
+}
+```
+
+2. 表达式形式
+
+```js
+const Person = class{
+  constructor(){}
+}
+```
+
+> 和立即执行的匿名函数一样的匿名类
+
+## 类的属性
+
+1. 实例属性
+
+```js
+class Person {
+//在这里声明无需任何修饰
+    name = 'ALG'
+    age = 1
+//方法也一样
+    func = function(){}
+//可以在构造方法里声明，但是在方法中引用需要this
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    speak() {
+        console.log(this.name, this.age);
+    }
+}
+```
+
+2. 类属性（类的非函数属性兼容性有问题，不要在开发中用）
+
+```js
+  static speak(){
+    //这里this指向类本身
+        console.log('AOOO')
+    }
+```
+
+## 私有属性和方法
+
+> ES6不支持，需要一些小技巧
+
+- 变量名前加'_'规定是私有
+- 将私有属性方法移出类
+
+## 继承
+
+- 使用extents关键字
+
+```js
+class Child extends Person {
+    constructor(name, age) {
+        super(name, age);
+    }
+}
+```
+
+>  所有属性都会被继承
+
+- Override
+
+写同名会覆盖
+
+## super
+
+和其他语言里的super功能差不多...
+
+```js
+super()
+super.func()//指向父类的原型
+```
+
+- 在静态方法中指向父类本身
+
+# Module模块系统
+
+- 模块化
+- 消除全局变量
+- 管理加载顺序
+
+```js
+//导出
+export default xxxx;
+//导入
+import xxx from 'xxx'
+```
+
+- html中引入
+
+```html
+<script src="..." type="module"></script>
+```
+
+## 导出和导入
+
+> 如果不导出也可以导入，多次导入只是执行一次代码
+
+- export default 对应 import
+
+```js
+export default age;//只能有一个
+import 任意合法名字 from '....'//会把导出的对象赋值给变量
+```
+
+- export 对应 import
+
+```js
+export const age = 19;//必须是声明或语句
+export {age};//这样也行
+import {age} from '...'//必须严格对应
+```
+
+- 多个导出
+
+```js
+export {a,b,c};
+import {a,b,c} from '...'
+```
+
+- 起别名
+
+```js
+export {a as aaa};
+import {aaa as a};
+```
+
+- 整体导入
+
+```js
+import * as xxx from '...'//作为一个对象，会把两种导出方式都导入
+```
+
+## 注意事项
+
+- 模块顶层this指向
+
+按模块方式加载（type="module")this指向undefined，否则指向window
+
+- import关键字和函数
+
+import会提升整个模块到头部，率先执行，不能在代码块中执行
+
+import()方法可以
+
+- 复合写法
+
+```
+export {xxx} from '...';
+//类似下面，但是不能在当前模块访问xxx
+import {xxx} from '...';
+export {xxx} from '...';
 ```
 
