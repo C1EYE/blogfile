@@ -453,4 +453,49 @@ POSIX标准中，是sem_wait() 和sem_post()
 
 ## 生产者/消费者（有界缓冲区）问题
 
- 
+ ![image-20210809232531607](https://raw.githubusercontent.com/C1EYE/figureBed/main/img/20210809232531.png)
+
+![image-20210809232542792](https://raw.githubusercontent.com/C1EYE/figureBed/main/img/20210809232542.png)
+
+- 在临界区加锁，使用一个二值信号量即可
+
+## 读者-写者锁
+
+![image-20210809234358552](https://raw.githubusercontent.com/C1EYE/figureBed/main/img/20210809234358.png)
+
+第一个读者获取锁时同时会获取写锁，其他读者可以获取读锁，当所有读者结束后等待的写者才可以获取锁。
+
+- 这种实现写者很容易饿死，应该在有写者等待时避免更多读者
+
+## 哲学家就餐问题
+
+> 实用性不强，但是很出名
+
+<img src="https://raw.githubusercontent.com/C1EYE/figureBed/main/img/20210809235606.png" alt="image-20210809235606389" style="zoom:50%;" />
+
+每位哲学家有时思考（不用餐具）有时吃饭（需要左右手餐具），如何设计函数提高并发而且没有死锁和饿死。看起来像下面这样：
+
+![image-20210810000149806](https://raw.githubusercontent.com/C1EYE/figureBed/main/img/20210810000149.png)
+
+- 辅助函数
+
+![image-20210810000120793](https://raw.githubusercontent.com/C1EYE/figureBed/main/img/20210810000120.png)
+
+![image-20210810000737726](https://raw.githubusercontent.com/C1EYE/figureBed/main/img/20210810000737.png)
+
+- 为避免死锁，有一个哲学家的获取餐具顺序不同（也可以是某些）
+
+> 诸如此类问题有很多，吸烟者，理发师什么的
+
+## 实现信号量
+
+> 使用底层同步原语实现自己的信号量
+
+![image-20210810001753660](https://raw.githubusercontent.com/C1EYE/figureBed/main/img/20210810001753.png)
+
+# 第三十二章 常见并发问题
+
+![image-20210810002616940](https://raw.githubusercontent.com/C1EYE/figureBed/main/img/20210810002617.png)
+
+## 非死锁缺陷
+
